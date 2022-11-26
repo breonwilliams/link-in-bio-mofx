@@ -1,6 +1,9 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,300,400,700);
-.card-group {
-  gap: 30px;
+@media only screen and (min-width: 769px) {
+  .card-group {
+    gap: 30px;
+    margin-bottom: 30px;
+  }
 }
 .card-group .card.card-linkin {
   border: none;
@@ -15,6 +18,13 @@
 @media only screen and (max-width: 768px) {
   .card-group .card.card-linkin {
     flex: inherit;
+    margin-bottom: 20px;
+  }
+}
+@media only screen and (min-width: 769px) {
+  .card-group .card.card-linkin {
+    position: relative;
+    padding: 26px 26px 47px;
   }
 }
 .card-group .card.card-linkin .card-body {
@@ -35,6 +45,12 @@
   font-size: 18px;
   color: #a8b3cf;
   text-decoration: none;
+}
+@media only screen and (min-width: 769px) {
+  .card-group .card.card-linkin .card-body .card-link {
+    position: absolute;
+    bottom: 26px;
+  }
 }
 .card-group .card.card-linkin .card-body .card-link::after {
   display: inline-block;
@@ -61,8 +77,14 @@
   top: 0;
   position: absolute;
 }
+.card-group .card.card-linkin.card-emc:after {
+  border-color: transparent #E0B332 transparent transparent;
+}
 .card-group .card.card-linkin.card-htsm:after {
   border-color: transparent #e1e9f0 transparent transparent;
+}
+.card-group .card.card-linkin.card-mmm:after {
+  border-color: transparent #00AEEF transparent transparent;
 }
 .card-group i.fa {
   background: #0e1217;
